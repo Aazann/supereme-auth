@@ -42,3 +42,8 @@ next-env.d.ts
 
 # generated prisma
 /src/generated/prisma
+
+# sqlite local databases
+*.db
+*.db-journal
+.env

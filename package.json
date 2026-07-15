@@ -1,5 +1,5 @@
 {
-  "name": "better-auth",
+  "name": "supreme-auth",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "test": "vitest",
-    "test:run": "vitest run"
+    "test:run": "vitest run",
+    "db:seed": "node scripts/seed.js"
   },
   "dependencies": {
     "@better-auth/api-key": "^1.6.23",

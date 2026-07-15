@@ -10,3 +10,11 @@ schema = schema.replace(/provider\s*=\s*"(postgresql|sqlite)"/, 'provider = "sql
 
 fs.writeFileSync(schemaPath, schema);
 console.log("Database provider set to SQLite for development & testing.");
+
+// Create .env file for local SQLite configurations
+const envPath = path.join(__dirname, '..', '.env');
+fs.writeFileSync(
+  envPath,
+  'DATABASE_URL="file:./dev.db"\nBETTER_AUTH_SECRET="supreme_secret_key_12345678"\nBETTER_AUTH_URL="http://localhost:3000"\n'
+);
+console.log("Created .env with SQLite configurations.");
